@@ -8,13 +8,21 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #eee;
 }
 
 .tower {
-    width: 400px;
-    height: 600px;
-    /* background-color: #ccc; */
+    width: 20%;
+    height: 30vw;
     position: relative;
+}
+
+.tower img {
+    width: 30%;
+    position: absolute;
+    top: -6%;
+    left: 30%;
+    display: none;
 }
 
 .stand {
@@ -22,8 +30,8 @@ body {
     bottom: 0;
     width: 100%;
     height: 10%;
-    background-color: black;
-    border-radius: 6px;
+    background-image: url('/images/wood-vertical.png');
+    border-radius: 10px;
     z-index: -1;
 }
 
@@ -31,18 +39,17 @@ body {
     position: absolute;
     bottom: 0;
     left: 50%;
-    width: 10%;
-    height: 100%;
+    width: 12%;
+    height: 70%;
     transform: translateX(-50%);
-    background-color: black;
-    border-radius: 6px;
+    background-image: url('/images/wood-vertical.png');
+    border-radius: 10px;
     z-index: -1;
 }
 
 .disc-container {
     width: 100%;
     height: 90%;
-    /* background-color: #fab; */
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -50,31 +57,49 @@ body {
 
 .disc {
     border-radius: 30px;
-    z-index: 1000;
 }
 
 #disc-1 {
     width: 80%;
     height: 10%;
-    background-color: teal;
+    /* background-image: url('images/wood-horizontal.png'); */
+    background-color: #b41d1d;
 }
 
 #disc-2 {
     width: 70%;
     height: 10%;
-    background-color: rgb(54, 105, 149);
+    /* background-image: url('images/wood-horizontal.png'); */
+    background-color: #1960b1;
+
 }
 
 #disc-3 {
     width: 60%;
     height: 10%;
-    background-color: brown;
+    /* background-image: url('images/wood-horizontal.png'); */
+    background-color: #4bd422;
 }
 
 #disc-4 {
     width: 50%;
     height: 10%;
-    background-color: coral;
+    /* background-image: url('images/wood-horizontal.png'); */
+    background-color: #fff128;
+}
+
+#disc-5 {
+    width: 40%;
+    height: 10%;
+    /* background-image: url('images/wood-horizontal.png'); */
+    background-color: #444;
+}
+
+#disc-6 {
+    width: 30%;
+    height: 10%;
+    /* background-image: url('images/wood-horizontal.png'); */
+    background-color: #cacaca;
 }
 
 .dragging {
@@ -83,4 +108,23 @@ body {
 
 .invisible {
     visibility: hidden;
+}
+
+.warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+    font-family: sans-serif;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .warning {
+        display: flex;
+    }
 }
